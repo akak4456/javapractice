@@ -1,19 +1,19 @@
 package ch09;
 
-public class Point implements Cloneable {
+public class Point2 implements Cloneable {
 	int x,y;
-	Point(int x,int y){
+	Point2(int x,int y){
 		this.x = x;
 		this.y = y;
 	}
 	public String toString() {
-		return "("+x+","+y+")";
+		return "x="+x+", y="+y;
 	}
-	public Object clone() {
+	public Point clone() {
 		Object obj = null;
 		try {
 			obj = super.clone();
 		}catch(CloneNotSupportedException e) {}
-		return obj;
+		return (Point)obj;
 	}
 }
